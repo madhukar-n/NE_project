@@ -1,0 +1,5962 @@
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch2
+instantiating app ryu.controller.ofp_handler of OFPHandler
+[SWITCH ENTER] 1 - Fetch Switch Features into this : 
+ {1: {}}
+handle_port_info:
+[DPID] 1 [PORTS]
+[SWITCH ENTER] 2 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 2: {}}
+handle_port_info:
+[DPID] 2 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'2',len=2,subtype=7,tlv_info=b'\x072',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 2: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2)]}
+[TIME ELAPSED] 1.9161001546308398e-05
+(1, 2)
+(2, 2)
+[SWITCH ENTER] 3 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'host', 'dpid': None}}, 3: {}}
+handle_port_info:
+[DPID] 3 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'3',len=2,subtype=7,tlv_info=b'\x073',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2)]}
+[TIME ELAPSED] 3.189500421285629e-05
+[SWITCH ENTER] 4 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'host', 'dpid': None}}, 4: {}}
+(2, 2)
+handle_port_info:
+[DPID] 4 [PORTS]
+(1, 2)
+(3, 3)
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'4',len=2,subtype=7,tlv_info=b'\x074',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1}, 4: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2)]}
+[TIME ELAPSED] 3.422699955990538e-05
+(2, 2)
+(4, 3)
+(3, 2)
+[SWITCH ENTER] 5 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}, 5: {}}
+handle_port_info:
+[DPID] 5 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'5',len=2,subtype=7,tlv_info=b'\x075',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1}, 4: {1}, 5: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[TIME ELAPSED] 4.3091000407002866e-05
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+[PORT CHANGE] 1 OFPPort(port_no=4294967294,hw_addr='62:4b:19:82:8c:4f',name=b's1',config=0,state=4,curr=0,advertised=0,supported=0,peer=0,curr_speed=0,max_speed=0)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+[PORT CHANGE] 1 OFPPort(port_no=3,hw_addr='02:0a:83:7f:22:c9',name=b'gre1',config=0,state=0,curr=0,advertised=0,supported=0,peer=0,curr_speed=0,max_speed=0)
+[PORT CHANGE] 1 OFPPort(port_no=3,hw_addr='02:0a:83:7f:22:c9',name=b'gre1',config=0,state=4,curr=0,advertised=0,supported=0,peer=0,curr_speed=0,max_speed=0)
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "host", "dpid": null}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}} [HOST PORTS] {1: {1, 3}, 2: {1}, 3: {1}, 4: {1}, 5: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'host', 'dpid': None}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[TIME ELAPSED] 0.0009671570005593821
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'1',len=2,subtype=7,tlv_info=b'\x071',typelen=514), PortID(len=2,port_id=b'3',subtype=2,tlv_info=b'\x023',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1}, 4: {1}, 5: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[TIME ELAPSED] 4.467899998417124e-05
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(4, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+(2, 2)
+[DPID] 1 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+(1, 2)
+(3, 3)
+[DPID] 2 [IN_PORT] 2 | [PORTS TO FLOOD] {1, 3}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+(2, 2)
+(4, 3)
+[DPID] 3 [IN_PORT] 2 | [PORTS TO FLOOD] {1, 3}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='de:fd:2b:a3:c1:c4',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='da:29:eb:3f:3e:bd')
+[DPID] 3 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+(3, 2)
+(5, 3)
+[DPID] 4 [IN_PORT] 2 | [PORTS TO FLOOD] {1, 3}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='de:fd:2b:a3:c1:c4',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='da:29:eb:3f:3e:bd')
+[DPID] 2 [IN_PORT] 3 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+(4, 2)
+[DPID] 5 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='de:fd:2b:a3:c1:c4',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='da:29:eb:3f:3e:bd')
+[DPID] 1 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='da:29:eb:3f:3e:bd')
+[DPID] 3 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='da:29:eb:3f:3e:bd')
+[DPID] 2 [IN_PORT] 3 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='da:29:eb:3f:3e:bd')
+[DPID] 1 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='da:29:eb:3f:3e:bd',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+[DPID] 1 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='da:29:eb:3f:3e:bd',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+[DPID] 2 [IN_PORT] 2 | [PORTS TO FLOOD] {3}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='da:29:eb:3f:3e:bd',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='de:fd:2b:a3:c1:c4')
+[DPID] 3 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+[PORT CHANGE] 1 OFPPort(port_no=1,hw_addr='ae:54:db:d4:24:d9',name=b's1-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 1 OFPPort(port_no=1,hw_addr='ae:54:db:d4:24:d9',name=b's1-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 2 OFPPort(port_no=1,hw_addr='32:b2:8e:dc:09:a0',name=b's2-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 2 OFPPort(port_no=1,hw_addr='32:b2:8e:dc:09:a0',name=b's2-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 3 OFPPort(port_no=1,hw_addr='aa:63:69:ee:2d:e7',name=b's3-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 3 OFPPort(port_no=1,hw_addr='aa:63:69:ee:2d:e7',name=b's3-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 4 OFPPort(port_no=1,hw_addr='22:6a:44:0d:c6:08',name=b's4-eth1',config=0,state=4,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 5 OFPPort(port_no=1,hw_addr='0a:0f:ed:e7:84:5f',name=b's5-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 5 OFPPort(port_no=1,hw_addr='0a:0f:ed:e7:84:5f',name=b's5-eth1',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 3 OFPPort(port_no=2,hw_addr='7a:8a:b0:ee:55:82',name=b's3-eth2',config=0,state=4,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 1 OFPPort(port_no=2,hw_addr='96:fd:5e:3d:a1:b8',name=b's1-eth2',config=0,state=4,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 2 OFPPort(port_no=2,hw_addr='96:fb:4f:d6:59:5a',name=b's2-eth2',config=0,state=4,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 2 OFPPort(port_no=3,hw_addr='32:9e:46:c6:2b:2d',name=b's2-eth3',config=0,state=4,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 3 OFPPort(port_no=3,hw_addr='26:c5:bb:cc:1b:a6',name=b's3-eth3',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 3 OFPPort(port_no=3,hw_addr='26:c5:bb:cc:1b:a6',name=b's3-eth3',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 4 OFPPort(port_no=2,hw_addr='d2:8d:9a:08:69:d3',name=b's4-eth2',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 4 OFPPort(port_no=2,hw_addr='d2:8d:9a:08:69:d3',name=b's4-eth2',config=0,state=0,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 4 OFPPort(port_no=3,hw_addr='8a:72:27:98:ad:ff',name=b's4-eth3',config=0,state=4,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+[PORT CHANGE] 5 OFPPort(port_no=2,hw_addr='a6:cf:ab:ff:9c:7d',name=b's5-eth2',config=0,state=4,curr=2112,advertised=0,supported=0,peer=0,curr_speed=10000000,max_speed=0)
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch2
+instantiating app ryu.controller.ofp_handler of OFPHandler
+[SWITCH ENTER] 1 - Fetch Switch Features into this : 
+ {1: {}}
+handle_port_info:
+[DPID] 1 [PORTS]
+[SWITCH ENTER] 2 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 2: {}}
+handle_port_info:
+[DPID] 2 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'2',len=2,subtype=7,tlv_info=b'\x072',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 2: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2)]}
+[TIME ELAPSED] 3.253100294386968e-05
+[SWITCH ENTER] 3 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'host', 'dpid': None}}, 3: {}}
+handle_port_info:
+[DPID] 3 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'3',len=2,subtype=7,tlv_info=b'\x073',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2)]}
+[TIME ELAPSED] 2.448799932608381e-05
+[SWITCH ENTER] 4 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'host', 'dpid': None}}, 4: {}}
+handle_port_info:
+[DPID] 4 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'4',len=2,subtype=7,tlv_info=b'\x074',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1}, 4: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2)]}
+[TIME ELAPSED] 4.556900239549577e-05
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+[SWITCH ENTER] 5 - Fetch Switch Features into this : 
+ {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}, 5: {}}
+handle_port_info:
+[DPID] 5 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'5',len=2,subtype=7,tlv_info=b'\x075',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1}, 4: {1}, 5: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[TIME ELAPSED] 4.751600499730557e-05
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+[PORT CHANGE] 1 OFPPort(port_no=4294967294,hw_addr='72:4e:78:0e:09:49',name=b's1',config=0,state=4,curr=0,advertised=0,supported=0,peer=0,curr_speed=0,max_speed=0)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+[PORT CHANGE] 1 OFPPort(port_no=3,hw_addr='da:c5:31:86:1c:e9',name=b'gre1',config=0,state=0,curr=0,advertised=0,supported=0,peer=0,curr_speed=0,max_speed=0)
+[PORT CHANGE] 1 OFPPort(port_no=3,hw_addr='da:c5:31:86:1c:e9',name=b'gre1',config=0,state=4,curr=0,advertised=0,supported=0,peer=0,curr_speed=0,max_speed=0)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "host", "dpid": null}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}} [HOST PORTS] {1: {1, 3}, 2: {1}, 3: {1}, 4: {1}, 5: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'host', 'dpid': None}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}}
+[ADJACENCY LIST] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[TIME ELAPSED] 4.187900049146265e-05
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'1',len=2,subtype=7,tlv_info=b'\x071',typelen=514), PortID(len=2,port_id=b'3',subtype=2,tlv_info=b'\x023',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}} [HOST PORTS] {1: {1}, 2: {1}, 3: {1}, 4: {1}, 5: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 2: [(1, 2), (3, 3)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 5: [(4, 2)]}
+[TIME ELAPSED] 4.697799886344001e-05
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+(2, 2)
+[DPID] 1 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+(1, 2)
+(3, 3)
+[DPID] 2 [IN_PORT] 2 | [PORTS TO FLOOD] {1, 3}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+(2, 2)
+(4, 3)
+[DPID] 3 [IN_PORT] 2 | [PORTS TO FLOOD] {1, 3}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='fa:0f:d7:14:7c:46',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='f2:a4:60:c6:13:aa')
+[DPID] 3 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+(3, 2)
+(5, 3)
+[DPID] 4 [IN_PORT] 2 | [PORTS TO FLOOD] {1, 3}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='fa:0f:d7:14:7c:46',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='f2:a4:60:c6:13:aa')
+[DPID] 2 [IN_PORT] 3 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+(4, 2)
+[DPID] 5 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='fa:0f:d7:14:7c:46',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='f2:a4:60:c6:13:aa')
+[DPID] 1 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='f2:a4:60:c6:13:aa')
+[DPID] 3 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='f2:a4:60:c6:13:aa')
+[DPID] 2 [IN_PORT] 3 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.1',dst_mac='00:00:00:00:00:00',hlen=6,hwtype=1,opcode=1,plen=4,proto=2048,src_ip='10.1.0.3',src_mac='f2:a4:60:c6:13:aa')
+[DPID] 1 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='f2:a4:60:c6:13:aa',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+[DPID] 1 [IN_PORT] 1 | [PORTS TO FLOOD] {2}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='f2:a4:60:c6:13:aa',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+[DPID] 2 [IN_PORT] 2 | [PORTS TO FLOOD] {3}
+[ARP PACKET] arp(dst_ip='10.1.0.3',dst_mac='f2:a4:60:c6:13:aa',hlen=6,hwtype=1,opcode=2,plen=4,proto=2048,src_ip='10.1.0.1',src_mac='fa:0f:d7:14:7c:46')
+[DPID] 3 [IN_PORT] 2 | [PORTS TO FLOOD] {1}
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch2
+instantiating app ryu.controller.ofp_handler of OFPHandler
+[SWITCH ENTER] 1 - Fetch Switch Features into this : 
+ {1: {}}
+[SWITCH ENTER] 3 - Fetch Switch Features into this : 
+ {1: {}, 3: {}}
+[SWITCH ENTER] 2 - Fetch Switch Features into this : 
+ {1: {}, 3: {}, 2: {}}
+[SWITCH ENTER] 5 - Fetch Switch Features into this : 
+ {1: {}, 3: {}, 2: {}, 5: {}}
+[SWITCH ENTER] 4 - Fetch Switch Features into this : 
+ {1: {}, 3: {}, 2: {}, 5: {}, 4: {}}
+handle_port_info:
+[DPID] 3 [PORTS]
+handle_port_info:
+[DPID] 1 [PORTS]
+handle_port_info:
+[DPID] 2 [PORTS]
+handle_port_info:
+[DPID] 5 [PORTS]
+handle_port_info:
+[DPID] 4 [PORTS]
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'2',len=2,subtype=7,tlv_info=b'\x072',typelen=514), PortID(len=2,port_id=b'3',subtype=2,tlv_info=b'\x023',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}, "3": {"neighbour": "host", "dpid": null}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "host", "dpid": null}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1, 2, 3}, 3: {1, 3}, 2: {1, 2}, 5: {1, 2}, 4: {1, 2, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}, 3: {'neighbour': 'host', 'dpid': None}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'host', 'dpid': None}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [], 3: [(2, 2)], 2: [(3, 3)], 5: [], 4: []}
+[SPANNING TREE] {1: [], 3: [], 2: [], 5: [], 4: []}
+[TIME ELAPSED] 3.3513002563267946e-05
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'3',len=2,subtype=7,tlv_info=b'\x073',typelen=514), PortID(len=2,port_id=b'3',subtype=2,tlv_info=b'\x023',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}, "3": {"neighbour": "host", "dpid": null}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1, 2, 3}, 3: {1}, 2: {1, 2}, 5: {1, 2}, 4: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}, 3: {'neighbour': 'host', 'dpid': None}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [], 3: [(2, 2), (4, 3)], 2: [(3, 3)], 5: [], 4: [(3, 2)]}
+[SPANNING TREE] {1: [], 3: [], 2: [], 5: [], 4: []}
+[TIME ELAPSED] 1.7985999875236303e-05
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'1',len=2,subtype=7,tlv_info=b'\x071',typelen=514), PortID(len=2,port_id=b'3',subtype=2,tlv_info=b'\x023',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}, "3": {"neighbour": "switch", "dpid": 1}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1, 2}, 3: {1}, 2: {1, 2}, 5: {1, 2}, 4: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}, 3: {'neighbour': 'switch', 'dpid': 1}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(1, 3)], 3: [(2, 2), (4, 3)], 2: [(3, 3)], 5: [], 4: [(3, 2)]}
+[SPANNING TREE] {1: [], 3: [], 2: [], 5: [], 4: []}
+[TIME ELAPSED] 1.6543999663554132e-05
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'2',len=2,subtype=7,tlv_info=b'\x072',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 3: {1}, 2: {1}, 5: {1, 2}, 4: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [], 4: [(3, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [], 4: [(3, 2)]}
+[TIME ELAPSED] 3.78359982278198e-05
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 3: {1}, 2: {1}, 5: {1, 2}, 4: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [], 4: [(3, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [], 4: [(3, 2)]}
+[TIME ELAPSED] 2.678400051081553e-05
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "host", "dpid": null}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "host", "dpid": null}}} [HOST PORTS] {1: {1}, 3: {1}, 2: {1}, 5: {1, 2}, 4: {1, 3}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'host', 'dpid': None}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'host', 'dpid': None}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [], 4: [(3, 2)]}
+[SPANNING TREE] {1: [(2, 2)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [], 4: [(3, 2)]}
+[TIME ELAPSED] 2.568000491010025e-05
+[LLDP PACKET] lldp(tlvs=[ChassisID(chassis_id=b'5',len=2,subtype=7,tlv_info=b'\x075',typelen=514), PortID(len=2,port_id=b'2',subtype=2,tlv_info=b'\x022',typelen=1026), TTL(len=2,tlv_info=b'\x00x',ttl=120,typelen=1538), End(len=0,tlv_info=b'',typelen=0)])
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}} [HOST PORTS] {1: {1}, 3: {1}, 2: {1}, 5: {1}, 4: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [(4, 2)], 4: [(3, 2), (5, 3)]}
+[SPANNING TREE] {1: [(2, 2)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [(4, 2)], 4: [(3, 2), (5, 3)]}
+[TIME ELAPSED] 3.469699731795117e-05
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}} [HOST PORTS] {1: {1}, 3: {1}, 2: {1}, 5: {1}, 4: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [(4, 2)], 4: [(3, 2), (5, 3)]}
+[SPANNING TREE] {1: [(2, 2)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [(4, 2)], 4: [(3, 2), (5, 3)]}
+[TIME ELAPSED] 2.8777001716662198e-05
+[AFTER LLDP HANDLE] {"1": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 1}}, "3": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 2}, "3": {"neighbour": "switch", "dpid": 4}}, "2": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 1}, "3": {"neighbour": "switch", "dpid": 3}}, "5": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 4}}, "4": {"1": {"neighbour": "host", "dpid": null}, "2": {"neighbour": "switch", "dpid": 3}, "3": {"neighbour": "switch", "dpid": 5}}} [HOST PORTS] {1: {1}, 3: {1}, 2: {1}, 5: {1}, 4: {1}}
+[SWITCHES] {1: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 1}}, 3: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 2}, 3: {'neighbour': 'switch', 'dpid': 4}}, 2: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 1}, 3: {'neighbour': 'switch', 'dpid': 3}}, 5: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 4}}, 4: {1: {'neighbour': 'host', 'dpid': None}, 2: {'neighbour': 'switch', 'dpid': 3}, 3: {'neighbour': 'switch', 'dpid': 5}}}
+[ADJACENCY LIST] {1: [(2, 2), (1, 3)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [(4, 2)], 4: [(3, 2), (5, 3)]}
+[SPANNING TREE] {1: [(2, 2)], 3: [(2, 2), (4, 3)], 2: [(1, 2), (3, 3)], 5: [(4, 2)], 4: [(3, 2), (5, 3)]}
+[TIME ELAPSED] 2.8655995265580714e-05
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(2, 2)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(4, 2)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(2, 2)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(2, 2)
+(4, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 2)
+(3, 2)
+(5, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(4, 3)
+(1, 2)
+(3, 3)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+(2, 2)
+(1, 2)
+(3, 3)
+(2, 2)
+(4, 3)
+(3, 2)
+(5, 3)
+(4, 2)
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Tree: {1: [(2, 2)], 4: [], 3: [], 5: [], 2: [(1, 2)]}
+Tree: {1: [(2, 2)], 4: [], 3: [], 5: [], 2: [(1, 2)]}
+Tree: {1: [(2, 2)], 4: [], 3: [(2, 2)], 5: [], 2: [(1, 2), (3, 3)]}
+Tree: {1: [(2, 2)], 4: [], 3: [(2, 2)], 5: [], 2: [(1, 2), (3, 3)]}
+Tree: {1: [(2, 2)], 4: [], 3: [(2, 2)], 5: [], 2: [(1, 2), (3, 3)]}
+Tree: {1: [(2, 2)], 4: [(3, 2)], 3: [(2, 2), (4, 3)], 5: [], 2: [(1, 2), (3, 3)]}
+Tree: {1: [(2, 2)], 4: [(3, 2), (5, 3)], 3: [(2, 2), (4, 3)], 5: [(4, 2)], 2: [(1, 2), (3, 3)]}
+Tree: {1: [(2, 2)], 4: [(3, 2), (5, 3)], 3: [(2, 2), (4, 3)], 5: [(4, 2)], 2: [(1, 2), (3, 3)]}
+Tree: {1: [(2, 2)], 4: [(3, 2), (5, 3)], 3: [(2, 2), (4, 3)], 5: [(4, 2)], 2: [(1, 2), (3, 3)]}
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Tree: {1: [(2, 2)], 2: [(1, 2)]}
+Tree: {1: [(2, 2)], 2: [(1, 2)], 3: [], 4: []}
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Tree: {1: [], 5: [], 3: [], 2: [], 4: []}
+Tree: {1: [(2, 3)], 5: [], 3: [], 2: [(1, 2)], 4: []}
+Tree: {1: [(3, 3)], 5: [], 3: [(1, 2)], 2: [], 4: []}
+Tree: {1: [(3, 3)], 5: [], 3: [(1, 2)], 2: [], 4: []}
+loading app simple_switch_stp.13.py
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app simple_switch_stp.13.py of SimpleSwitch13
+instantiating app ryu.controller.ofp_handler of OFPHandler
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Tree: {1: [(2, 2)], 2: [(1, 2)]}
+Tree: {1: [(2, 2)], 2: [(1, 2)], 3: [], 4: []}
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+loading app stp_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=36:4a:2c:9f:70:ae, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=36:f9:12:a5:b3:c8, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=6a:df:3f:18:2b:9a, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=d6:c6:ad:01:14:ff, port=Port<dpid=3, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=9e:f8:39:b3:96:6e, port=Port<dpid=3, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=6a:aa:3a:87:84:17, port=Port<dpid=4, port_no=3, LIVE>,>
+stplib: Exception occurred during handler processing. Backtrace from offending handler [port_status_handler] servicing event [EventOFPPortStatus] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 301, in port_status_handler
+    if bridge.ports_state[port.port_no] == port.state:
+KeyError: 4294967294
+Host Add: Host<mac=4e:59:08:9a:5c:aa, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=b6:76:83:b1:ee:fa, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=92:7d:98:23:e6:52, port=Port<dpid=5, port_no=1, LIVE>,fe80::907d:98ff:fe23:e652>
+Host Add: Host<mac=d6:12:57:e8:44:a7, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=d2:ca:a0:90:01:8d, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=c6:c3:3e:bc:07:81, port=Port<dpid=4, port_no=1, LIVE>,fe80::c4c3:3eff:febc:781>
+Host Add: Host<mac=8e:34:64:b2:c6:bf, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+loading app stp_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=ca:54:e1:53:2f:13, port=Port<dpid=1, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=9e:42:d8:53:7b:72, port=Port<dpid=2, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=3a:79:a4:40:72:f0, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=fe:e1:05:32:82:3c, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=72:0d:4f:69:bb:51, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=36:4b:0b:37:93:19, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=72:e8:a6:c7:77:1c, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=7a:09:8d:a1:5b:99, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=92:9d:38:2c:bd:b5, port=Port<dpid=1, port_no=1, LIVE>,10.1.0.1>
+Host Add: Host<mac=6a:40:dd:f3:13:96, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=8a:5b:5d:e9:4f:fa, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+Host Add: Host<mac=b2:0b:85:00:96:52, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Host Add: Host<mac=6e:d3:ed:50:a7:c3, port=Port<dpid=5, port_no=1, LIVE>,10.1.0.5>
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=66:c3:26:e1:f6:99, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=fa:13:fa:1d:3b:ca, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=7e:b1:0c:8b:59:d5, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=4e:f6:34:65:99:f2, port=Port<dpid=3, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=2a:b2:4e:12:9c:18, port=Port<dpid=3, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=9a:3f:c3:fb:c6:a0, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=06:4a:5e:68:27:ab, port=Port<dpid=5, port_no=2, LIVE>,>
+stplib: Exception occurred during handler processing. Backtrace from offending handler [port_status_handler] servicing event [EventOFPPortStatus] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 301, in port_status_handler
+    if bridge.ports_state[port.port_no] == port.state:
+KeyError: 4294967294
+Host Add: Host<mac=52:08:42:8c:36:f0, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=c6:cc:72:44:a1:a7, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=ee:1f:0a:9a:db:98, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+Host Add: Host<mac=26:39:09:33:86:fc, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=7a:21:f6:d9:1a:4f, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Host Add: Host<mac=6a:be:43:bc:ad:f4, port=Port<dpid=5, port_no=1, LIVE>,10.1.0.5>
+hub: uncaught exception: Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 60, in _launch
+    return func(*args, **kwargs)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 540, in recalculate_spanning_tree
+    port.down(PORT_STATE_BLOCK, msg_init=init)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 803, in down
+    self._change_status(state)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 879, in _change_status
+    self.send_bpdu_thread.stop()
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 1101, in stop
+    hub.joinall([self.thread])
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 103, in joinall
+    t.wait()
+AttributeError: 'NoneType' object has no attribute 'wait'
+
+hub: uncaught exception: Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 60, in _launch
+    return func(*args, **kwargs)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 540, in recalculate_spanning_tree
+    port.down(PORT_STATE_BLOCK, msg_init=init)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 803, in down
+    self._change_status(state)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 879, in _change_status
+    self.send_bpdu_thread.stop()
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 1101, in stop
+    hub.joinall([self.thread])
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 103, in joinall
+    t.wait()
+AttributeError: 'NoneType' object has no attribute 'wait'
+
+hub: uncaught exception: Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 60, in _launch
+    return func(*args, **kwargs)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 540, in recalculate_spanning_tree
+    port.down(PORT_STATE_BLOCK, msg_init=init)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 803, in down
+    self._change_status(state)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 879, in _change_status
+    self.send_bpdu_thread.stop()
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 1101, in stop
+    hub.joinall([self.thread])
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 103, in joinall
+    t.wait()
+AttributeError: 'NoneType' object has no attribute 'wait'
+
+hub: uncaught exception: Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 60, in _launch
+    return func(*args, **kwargs)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 540, in recalculate_spanning_tree
+    port.down(PORT_STATE_BLOCK, msg_init=init)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 803, in down
+    self._change_status(state)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 879, in _change_status
+    self.send_bpdu_thread.stop()
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 1101, in stop
+    hub.joinall([self.thread])
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 103, in joinall
+    t.wait()
+AttributeError: 'NoneType' object has no attribute 'wait'
+
+hub: uncaught exception: Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 60, in _launch
+    return func(*args, **kwargs)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 540, in recalculate_spanning_tree
+    port.down(PORT_STATE_BLOCK, msg_init=init)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 803, in down
+    self._change_status(state)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 879, in _change_status
+    self.send_bpdu_thread.stop()
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 1101, in stop
+    hub.joinall([self.thread])
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/hub.py", line 103, in joinall
+    t.wait()
+AttributeError: 'NoneType' object has no attribute 'wait'
+
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=da:d5:13:e0:68:4f, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=62:94:29:42:cc:44, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=ae:81:5c:6e:56:de, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=8e:35:47:cf:82:4e, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=6a:6c:b5:08:af:48, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=96:40:bf:69:77:e9, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=8e:15:be:06:df:2b, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=5e:f6:a2:67:02:f1, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=86:89:82:5b:7d:97, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=62:50:bf:88:82:1f, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=fa:f3:2f:1e:65:91, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+Host Add: Host<mac=d6:d2:a4:e8:6d:02, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Host Add: Host<mac=0a:80:7a:6e:fb:5f, port=Port<dpid=5, port_no=1, LIVE>,10.1.0.5>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=e2:00:a8:1c:38:e6, port=Port<dpid=1, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=02:11:14:63:64:7b, port=Port<dpid=2, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=0e:26:61:e3:bc:fb, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=52:e9:04:ee:2c:16, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=ae:1e:44:b5:21:de, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=d2:6f:57:b5:8f:30, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=2e:f7:fd:90:17:0e, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=d6:77:d6:16:e4:9f, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=0e:53:56:0b:e7:0b, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+Host Add: Host<mac=ce:8e:2c:77:25:6a, port=Port<dpid=1, port_no=1, LIVE>,10.1.0.1>
+Host Add: Host<mac=d2:6b:62:2d:a6:5b, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=06:1d:02:5e:dc:f5, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Host Add: Host<mac=e2:3a:4d:1c:14:cd, port=Port<dpid=5, port_no=1, LIVE>,10.1.0.5>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, DOWN> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=66:89:6d:50:ed:07, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=82:50:b9:b0:c0:42, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=fe:82:ff:49:99:e4, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=52:97:a7:9d:32:86, port=Port<dpid=3, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=a6:2e:fb:36:51:8a, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=9a:a1:74:a9:f1:89, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=62:c8:81:45:f3:62, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=36:25:52:cc:db:51, port=Port<dpid=5, port_no=2, LIVE>,>
+stplib: Exception occurred during handler processing. Backtrace from offending handler [port_status_handler] servicing event [EventOFPPortStatus] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 301, in port_status_handler
+    if bridge.ports_state[port.port_no] == port.state:
+KeyError: 4294967294
+Host Add: Host<mac=1a:30:63:96:4c:b6, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+Host Add: Host<mac=5e:4c:7e:6d:56:99, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=d2:e4:ce:5d:ab:e6, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Host Add: Host<mac=92:e7:1c:10:a0:90, port=Port<dpid=5, port_no=1, LIVE>,10.1.0.5>
+Host Add: Host<mac=ce:9e:36:10:11:19, port=Port<dpid=1, port_no=1, LIVE>,10.1.0.1>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=56:6d:a2:a9:a1:2f, port=Port<dpid=1, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=12:65:53:99:94:37, port=Port<dpid=2, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=2e:32:60:67:14:34, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=fe:cc:62:fb:c2:fa, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=c2:8b:18:d9:8f:f7, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=ae:22:c6:d6:16:1e, port=Port<dpid=5, port_no=2, LIVE>,>
+stplib: Exception occurred during handler processing. Backtrace from offending handler [port_status_handler] servicing event [EventOFPPortStatus] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/lib/stplib.py", line 301, in port_status_handler
+    if bridge.ports_state[port.port_no] == port.state:
+KeyError: 4294967294
+Host Add: Host<mac=4e:3e:4d:f5:0c:2b, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=0e:7c:3c:03:ff:5c, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=00:00:00:00:00:04, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Host Add: Host<mac=00:00:00:00:00:05, port=Port<dpid=5, port_no=1, LIVE>,10.1.0.5>
+Host Add: Host<mac=00:00:00:00:00:01, port=Port<dpid=1, port_no=1, LIVE>,10.1.0.1>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=8a:38:6c:38:cb:33, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=3e:01:4d:25:eb:f2, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=26:a6:65:87:38:b4, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=fe:e1:8c:ed:a0:1f, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=46:d2:7b:7a:eb:9b, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=ae:44:00:60:dc:60, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=fa:75:63:d0:9a:7c, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=fa:2e:f0:69:85:e4, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=a6:1d:e6:6a:cd:6a, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,fe80::200:ff:fe00:3>
+Host Add: Host<mac=00:00:00:00:00:05, port=Port<dpid=5, port_no=1, LIVE>,fe80::200:ff:fe00:5>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=00:00:00:00:00:04, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=ba:52:dd:e2:3c:20, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=9a:97:59:99:11:5d, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=82:4f:e5:da:2e:f8, port=Port<dpid=2, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=8e:be:45:a2:82:84, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=d2:04:ad:06:97:c4, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=5a:7c:74:e6:4c:cd, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=ae:0e:fa:c8:6f:4a, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=0a:27:b2:5f:e2:54, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,fe80::200:ff:fe00:2>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=4a:17:ae:e1:2d:0d, port=Port<dpid=1, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=46:b7:4b:0a:77:20, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=66:f1:93:d6:a6:ce, port=Port<dpid=3, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=c6:a6:07:57:92:f1, port=Port<dpid=3, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=2a:8f:be:9c:ae:67, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=32:e1:08:a7:fa:9d, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=02:3e:a8:8f:23:b0, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=ee:f5:2d:90:ef:c0, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:05, port=Port<dpid=5, port_no=1, LIVE>,fe80::200:ff:fe00:5>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,fe80::200:ff:fe00:2>
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,fe80::200:ff:fe00:3>
+Host Add: Host<mac=00:00:00:00:00:01, port=Port<dpid=1, port_no=1, LIVE>,fe80::200:ff:fe00:1>
+Host Add: Host<mac=00:00:00:00:00:04, port=Port<dpid=4, port_no=1, LIVE>,fe80::200:ff:fe00:4>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=6e:18:8c:67:2b:df, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=76:2b:d1:d8:3e:7d, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=3e:fb:62:0f:a1:4c, port=Port<dpid=2, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=9e:fc:6b:18:bd:58, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=ca:fa:4e:39:0a:5a, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+Host Add: Host<mac=fe:07:ec:28:02:eb, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=4a:64:9c:d0:31:d5, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,fe80::200:ff:fe00:3>
+Host Add: Host<mac=2a:d0:fb:8f:db:b5, port=Port<dpid=3, port_no=2, LIVE>,fe80::28d0:fbff:fe8f:dbb5>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,fe80::200:ff:fe00:2>
+Host Add: Host<mac=00:00:00:00:00:01, port=Port<dpid=1, port_no=1, LIVE>,fe80::200:ff:fe00:1>
+Host Add: Host<mac=00:00:00:00:00:04, port=Port<dpid=4, port_no=1, LIVE>,fe80::200:ff:fe00:4>
+Host Add: Host<mac=00:00:00:00:00:05, port=Port<dpid=5, port_no=1, LIVE>,fe80::200:ff:fe00:5>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> >
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=92:9f:d1:c7:8c:df, port=Port<dpid=1, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=52:a6:e4:17:f1:4b, port=Port<dpid=2, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=62:bf:4d:58:3b:3e, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=5e:f2:31:06:59:64, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Host Add: Host<mac=8e:2b:40:54:5f:70, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=8e:75:31:0e:98:a4, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=3a:38:4a:59:38:47, port=Port<dpid=5, port_no=3, LIVE>,>
+Host Add: Host<mac=6e:f7:dc:c9:de:9f, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=c6:9b:5f:0d:f4:f6, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=7a:32:6d:24:d5:18, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,10.1.0.3>
+Host Add: Host<mac=00:00:00:00:00:01, port=Port<dpid=1, port_no=1, LIVE>,10.1.0.1>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,10.1.0.2>
+Host Add: Host<mac=00:00:00:00:00:04, port=Port<dpid=4, port_no=1, LIVE>,10.1.0.4>
+Host Add: Host<mac=00:00:00:00:00:05, port=Port<dpid=5, port_no=1, LIVE>,10.1.0.5>
+Host Add: Host<mac=00:00:00:00:00:06, port=Port<dpid=5, port_no=3, LIVE>,10.2.0.1>
+Host Add: Host<mac=00:00:00:00:00:07, port=Port<dpid=5, port_no=3, LIVE>,fe80::200:ff:fe00:7>
+Host Add: Host<mac=00:00:00:00:00:08, port=Port<dpid=5, port_no=3, LIVE>,fe80::200:ff:fe00:8>
+Host Add: Host<mac=6e:2d:ca:8f:1d:f7, port=Port<dpid=1, port_no=3, LIVE>,fe80::6c2d:caff:fe8f:1df7>
+Host Add: Host<mac=42:c1:7e:3a:d5:9e, port=Port<dpid=5, port_no=3, LIVE>,fe80::40c1:7eff:fe3a:d59e>
+Host Add: Host<mac=aa:54:f0:be:50:55, port=Port<dpid=1, port_no=3, LIVE>,fe80::a854:f0ff:febe:5055>
+Host Add: Host<mac=52:40:09:d2:63:82, port=Port<dpid=5, port_no=3, LIVE>,fe80::5040:9ff:fed2:6382>
+Host Add: Host<mac=a2:66:cf:28:b0:a8, port=Port<dpid=5, port_no=3, LIVE>,fe80::a066:cfff:fe28:b0a8>
+Host Add: Host<mac=00:00:00:00:00:09, port=Port<dpid=1, port_no=3, LIVE>,10.2.0.4>
+Host Add: Host<mac=02:9b:0e:09:20:48, port=Port<dpid=1, port_no=3, LIVE>,fe80::9b:eff:fe09:2048>
+Host Add: Host<mac=72:94:86:33:84:32, port=Port<dpid=1, port_no=3, LIVE>,fe80::7094:86ff:fe33:8432>
+Host Add: Host<mac=00:00:00:00:00:0b, port=Port<dpid=1, port_no=3, LIVE>,10.3.0.1>
+Host Add: Host<mac=00:00:00:00:00:0c, port=Port<dpid=1, port_no=3, LIVE>,10.3.0.2>
+Host Add: Host<mac=00:00:00:00:00:0d, port=Port<dpid=1, port_no=3, LIVE>,10.3.0.3>
+Host Add: Host<mac=00:00:00:00:00:0e, port=Port<dpid=1, port_no=3, LIVE>,10.3.0.4>
+Host Add: Host<mac=00:00:00:00:00:0a, port=Port<dpid=1, port_no=3, LIVE>,10.2.0.5>
+Host Add: Host<mac=3e:ba:81:77:7a:a3, port=Port<dpid=1, port_no=3, LIVE>,fe80::3cba:81ff:fe77:7aa3>
+Host Add: Host<mac=ce:52:38:1b:11:a5, port=Port<dpid=1, port_no=3, LIVE>,fe80::cc52:38ff:fe1b:11a5>
+Host Add: Host<mac=00:00:00:00:00:0f, port=Port<dpid=1, port_no=3, LIVE>,fe80::200:ff:fe00:f>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=a6:58:df:14:b7:f0, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=3a:d3:51:a8:aa:9d, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=86:68:c5:5b:f1:2e, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=8e:cb:f6:09:90:31, port=Port<dpid=3, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=ea:52:0b:2b:ed:85, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=d2:1c:37:46:78:05, port=Port<dpid=4, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Host Add: Host<mac=7a:4a:ed:18:e5:0f, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=8e:cc:15:f9:ae:e0, port=Port<dpid=5, port_no=3, LIVE>,>
+Host Add: Host<mac=ee:41:a9:e5:79:7a, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=72:76:50:a5:8e:12, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=26:11:4a:3c:25:b7, port=Port<dpid=1, port_no=3, LIVE>,fe80::2411:4aff:fe3c:25b7>
+Host Add: Host<mac=1e:68:20:62:0f:a2, port=Port<dpid=1, port_no=3, LIVE>,fe80::1c68:20ff:fe62:fa2>
+Host Add: Host<mac=82:15:ca:54:43:cf, port=Port<dpid=1, port_no=3, LIVE>,fe80::8015:caff:fe54:43cf>
+Host Add: Host<mac=22:40:d4:48:fb:47, port=Port<dpid=1, port_no=3, LIVE>,fe80::2040:d4ff:fe48:fb47>
+Host Add: Host<mac=fa:5e:98:c0:0e:c6, port=Port<dpid=1, port_no=3, LIVE>,fe80::f85e:98ff:fec0:ec6>
+Host Add: Host<mac=f6:98:46:f7:dd:91, port=Port<dpid=1, port_no=3, LIVE>,fe80::f498:46ff:fef7:dd91>
+Host Add: Host<mac=f6:ed:f6:fa:43:85, port=Port<dpid=1, port_no=3, LIVE>,fe80::f4ed:f6ff:fefa:4385>
+Host Add: Host<mac=da:fa:6f:58:79:47, port=Port<dpid=1, port_no=3, LIVE>,fe80::d8fa:6fff:fe58:7947>
+Host Add: Host<mac=52:30:9b:01:84:7f, port=Port<dpid=1, port_no=3, LIVE>,fe80::5030:9bff:fe01:847f>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+loading app spanning_tree_protocol_v2.py
+loading app ryu.controller.ofp_handler
+instantiating app spanning_tree_protocol_v2.py of SpanningTreeSwitch
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Tree: {5: [], 3: [], 4: [], 2: []}
+Tree: {5: [], 3: [], 4: [], 2: []}
+Tree: {5: [], 3: [(2, 2), (4, 3)], 4: [(3, 2)], 2: [(3, 3)]}
+Tree: {5: [], 3: [(2, 2), (4, 3)], 4: [(3, 2)], 2: [(3, 3)]}
+Tree: {5: [(4, 2)], 3: [(2, 2), (4, 3)], 4: [(3, 2), (5, 3)], 2: [(3, 3)]}
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+SpanningTreeSwitch: Exception occurred during handler processing. Backtrace from offending handler [packet_in] servicing event [EventOFPPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 194, in packet_in
+    self.handle_lldp(dp, pkt, msg.match["in_port"])
+  File "/home/madhukar/Documents/NE_Project/controller/spanning_tree_protocol_v2.py", line 98, in handle_lldp
+    dst = int(l.tlvs[0].chassis_id.decode())
+ValueError: invalid literal for int() with base 10: 'dpid:0000000000000006'
+loading app stp_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+API method core.start called with args: {'waiter': <ryu.lib.hub.Event object at 0x7a80d363d040>, 'local_as': 100, 'router_id': '1.1.1.1', 'bgp_server_hosts': ['192.168.0.10'], 'bgp_server_port': 6633, 'refresh_stalepath_time': 0, 'refresh_max_eor_time': 0, 'label_range': (100, 100000), 'allow_local_as_in_count': 0, 'cluster_id': None, 'local_pref': 100}
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=82:a9:48:56:94:d1, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=66:c9:42:f9:67:4c, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=02:4d:f5:5a:8f:7b, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=f6:99:08:d2:ea:ea, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=e6:55:81:8b:48:64, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=d6:90:52:22:3b:78, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=02:2e:be:65:ee:1e, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=de:29:d7:c1:a8:64, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=aa:51:04:86:cc:bc, port=Port<dpid=5, port_no=3, LIVE>,>
+Host Add: Host<mac=26:c5:29:5c:69:f7, port=Port<dpid=1, port_no=3, LIVE>,>
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+Host Add: Host<mac=00:00:00:00:00:01, port=Port<dpid=1, port_no=1, LIVE>,10.0.0.1>
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    self._handle_lldp()
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,fe80::200:ff:fe00:3>
+Host Add: Host<mac=00:00:00:00:00:09, port=Port<dpid=1, port_no=3, LIVE>,fe80::200:ff:fe00:9>
+Host Add: Host<mac=00:00:00:00:00:08, port=Port<dpid=5, port_no=3, LIVE>,fe80::200:ff:fe00:8>
+Host Add: Host<mac=fe:fe:5c:c5:84:7c, port=Port<dpid=1, port_no=3, LIVE>,fe80::fcfe:5cff:fec5:847c>
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+Host Add: Host<mac=56:7c:78:23:a5:33, port=Port<dpid=1, port_no=3, LIVE>,fe80::547c:78ff:fe23:a533>
+Host Add: Host<mac=36:e0:79:6d:2d:9b, port=Port<dpid=1, port_no=3, LIVE>,fe80::34e0:79ff:fe6d:2d9b>
+Host Add: Host<mac=ce:5c:96:5e:55:40, port=Port<dpid=1, port_no=3, LIVE>,fe80::cc5c:96ff:fe5e:5540>
+Host Add: Host<mac=00:00:00:00:00:0f, port=Port<dpid=1, port_no=3, LIVE>,fe80::200:ff:fe00:f>
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+Host Add: Host<mac=6a:e3:46:38:6c:5b, port=Port<dpid=5, port_no=3, LIVE>,fe80::68e3:46ff:fe38:6c5b>
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+STPControllerOFPV_1_3: Exception occurred during handler processing. Backtrace from offending handler [_packet_in_handler] servicing event [EventPacketIn] follows.
+Traceback (most recent call last):
+  File "/home/madhukar/.local/share/virtualenvs/NE_Project-3PeEPiQw/lib/python3.8/site-packages/ryu/base/app_manager.py", line 290, in _event_loop
+    handler(ev)
+  File "/home/madhukar/Documents/NE_Project/controller/stp_controller.py", line 170, in _packet_in_handler
+    return
+AttributeError: 'STPControllerOFPV_1_3' object has no attribute '_handle_lldp'
+loading app stp_controller.py
+loading app stp_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+API method core.start called with args: {'waiter': <ryu.lib.hub.Event object at 0x7f3503587040>, 'local_as': 100, 'router_id': '1.1.1.1', 'bgp_server_hosts': ['192.168.0.10'], 'bgp_server_port': 6633, 'refresh_stalepath_time': 0, 'refresh_max_eor_time': 0, 'label_range': (100, 100000), 'allow_local_as_in_count': 0, 'cluster_id': None, 'local_pref': 100}
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=82:1e:ee:53:56:ba, port=Port<dpid=1, port_no=3, LIVE>,fe80::801e:eeff:fe53:56ba>
+Host Add: Host<mac=00:00:00:00:00:0c, port=Port<dpid=1, port_no=3, LIVE>,fe80::200:ff:fe00:c>
+Host Add: Host<mac=86:8b:6b:88:1b:0a, port=Port<dpid=1, port_no=3, LIVE>,fe80::848b:6bff:fe88:1b0a>
+Host Add: Host<mac=00:00:00:00:00:07, port=Port<dpid=5, port_no=3, LIVE>,fe80::200:ff:fe00:7>
+Host Add: Host<mac=22:8b:da:3a:26:4a, port=Port<dpid=5, port_no=3, LIVE>,fe80::208b:daff:fe3a:264a>
+Host Add: Host<mac=82:a9:48:56:94:d1, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=02:4d:f5:5a:8f:7b, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=f6:99:08:d2:ea:ea, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=66:c9:42:f9:67:4c, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=02:2e:be:65:ee:1e, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=de:29:d7:c1:a8:64, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=e6:55:81:8b:48:64, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=d6:90:52:22:3b:78, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=aa:51:04:86:cc:bc, port=Port<dpid=5, port_no=3, LIVE>,>
+Host Add: Host<mac=26:c5:29:5c:69:f7, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,10.0.0.2>
+Host Add: Host<mac=00:00:00:00:00:05, port=Port<dpid=5, port_no=1, LIVE>,10.0.0.5>
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,10.0.0.3>
+Host Add: Host<mac=00:00:00:00:00:01, port=Port<dpid=1, port_no=1, LIVE>,10.0.0.1>
+Host Add: Host<mac=00:00:00:00:00:04, port=Port<dpid=4, port_no=1, LIVE>,10.0.0.4>
+Host Add: Host<mac=00:00:00:00:00:06, port=Port<dpid=5, port_no=3, LIVE>,20.0.0.1>
+Host Add: Host<mac=00:00:00:00:00:08, port=Port<dpid=5, port_no=3, LIVE>,20.0.0.3>
+Host Add: Host<mac=00:00:00:00:00:09, port=Port<dpid=1, port_no=3, LIVE>,20.0.0.4>
+Host Add: Host<mac=00:00:00:00:00:0b, port=Port<dpid=1, port_no=3, LIVE>,30.0.0.1>
+Host Add: Host<mac=00:00:00:00:00:0d, port=Port<dpid=1, port_no=3, LIVE>,30.0.0.3>
+Host Add: Host<mac=00:00:00:00:00:0e, port=Port<dpid=1, port_no=3, LIVE>,30.0.0.4>
+Host Add: Host<mac=00:00:00:00:00:0a, port=Port<dpid=1, port_no=3, LIVE>,20.0.0.5>
+Host Add: Host<mac=fe:fe:5c:c5:84:7c, port=Port<dpid=1, port_no=3, LIVE>,fe80::fcfe:5cff:fec5:847c>
+Host Add: Host<mac=56:7c:78:23:a5:33, port=Port<dpid=1, port_no=3, LIVE>,fe80::547c:78ff:fe23:a533>
+Host Add: Host<mac=36:e0:79:6d:2d:9b, port=Port<dpid=1, port_no=3, LIVE>,fe80::34e0:79ff:fe6d:2d9b>
+Host Add: Host<mac=ce:5c:96:5e:55:40, port=Port<dpid=1, port_no=3, LIVE>,fe80::cc5c:96ff:fe5e:5540>
+Host Add: Host<mac=00:00:00:00:00:0f, port=Port<dpid=1, port_no=3, LIVE>,fe80::200:ff:fe00:f>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=be:f0:9c:ae:b7:32, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=a6:27:a5:a4:6b:f4, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=6a:24:43:36:c6:ec, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=96:a0:40:63:92:f6, port=Port<dpid=3, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=16:94:b9:e5:2f:0b, port=Port<dpid=3, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Host Add: Host<mac=a6:c5:50:89:72:84, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=f6:36:d1:3a:cf:19, port=Port<dpid=5, port_no=3, LIVE>,>
+Host Add: Host<mac=6e:29:43:6a:1e:fb, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=1e:34:ce:47:df:f6, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=ba:eb:56:d7:0a:98, port=Port<dpid=1, port_no=3, LIVE>,fe80::b8eb:56ff:fed7:a98>
+Host Add: Host<mac=32:f4:d0:f7:a6:49, port=Port<dpid=1, port_no=3, LIVE>,fe80::30f4:d0ff:fef7:a649>
+Host Add: Host<mac=6a:69:d3:e0:67:f3, port=Port<dpid=1, port_no=3, LIVE>,fe80::6869:d3ff:fee0:67f3>
+Host Add: Host<mac=1a:2b:0b:de:40:de, port=Port<dpid=1, port_no=3, LIVE>,fe80::182b:bff:fede:40de>
+Host Add: Host<mac=c6:ed:0e:6b:51:9f, port=Port<dpid=1, port_no=3, LIVE>,fe80::c4ed:eff:fe6b:519f>
+Host Add: Host<mac=02:fd:74:af:4c:9d, port=Port<dpid=5, port_no=3, LIVE>,fe80::fd:74ff:feaf:4c9d>
+Host Add: Host<mac=06:c6:d0:90:55:3c, port=Port<dpid=5, port_no=3, LIVE>,fe80::4c6:d0ff:fe90:553c>
+Host Add: Host<mac=5e:f9:31:61:3f:7c, port=Port<dpid=5, port_no=2, LIVE>,fe80::5cf9:31ff:fe61:3f7c>
+Host Add: Host<mac=a2:e8:7e:d9:24:a2, port=Port<dpid=1, port_no=3, LIVE>,fe80::a0e8:7eff:fed9:24a2>
+Host Add: Host<mac=8e:62:b5:ea:ae:29, port=Port<dpid=5, port_no=3, LIVE>,fe80::8c62:b5ff:feea:ae29>
+Host Add: Host<mac=d2:57:6d:d4:d6:a8, port=Port<dpid=1, port_no=3, LIVE>,fe80::d057:6dff:fed4:d6a8>
+Host Add: Host<mac=c6:dd:3a:35:a1:ed, port=Port<dpid=1, port_no=3, LIVE>,fe80::c4dd:3aff:fe35:a1ed>
+Host Add: Host<mac=de:24:a2:52:8b:93, port=Port<dpid=1, port_no=3, LIVE>,fe80::dc24:a2ff:fe52:8b93>
+Host Add: Host<mac=52:de:6c:de:af:10, port=Port<dpid=5, port_no=3, LIVE>,fe80::50de:6cff:fede:af10>
+Host Add: Host<mac=76:d2:8a:06:66:55, port=Port<dpid=5, port_no=3, LIVE>,fe80::74d2:8aff:fe06:6655>
+Host Add: Host<mac=ca:98:8a:5b:83:6d, port=Port<dpid=1, port_no=3, LIVE>,fe80::c898:8aff:fe5b:836d>
+Host Add: Host<mac=a6:5f:e6:fb:fa:79, port=Port<dpid=5, port_no=3, LIVE>,fe80::a45f:e6ff:fefb:fa79>
+Switch Leave:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Switch Leave:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Host Add: Host<mac=e6:31:17:f5:de:fb, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=d6:5d:66:b2:ba:60, port=Port<dpid=2, port_no=2, LIVE>,>
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Host Add: Host<mac=7a:20:53:dc:80:f8, port=Port<dpid=2, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=66:27:2b:a4:67:d9, port=Port<dpid=3, port_no=3, LIVE>,>
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Host Add: Host<mac=96:c0:a3:f4:d6:ec, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=6e:4e:53:2f:b7:38, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=5a:dd:13:be:28:09, port=Port<dpid=5, port_no=3, LIVE>,>
+Host Add: Host<mac=7a:63:9e:7d:89:f2, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=ba:ba:4d:1b:ce:c6, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=86:e9:39:ba:59:2c, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=02:8f:13:44:94:e6, port=Port<dpid=1, port_no=3, LIVE>,fe80::8f:13ff:fe44:94e6>
+Host Add: Host<mac=16:03:82:a4:81:b9, port=Port<dpid=1, port_no=3, LIVE>,fe80::1403:82ff:fea4:81b9>
+Host Add: Host<mac=26:78:5c:09:46:91, port=Port<dpid=1, port_no=3, LIVE>,fe80::2478:5cff:fe09:4691>
+Host Add: Host<mac=ba:2f:55:da:73:5f, port=Port<dpid=1, port_no=3, LIVE>,fe80::b82f:55ff:feda:735f>
+Host Add: Host<mac=96:4d:44:d9:76:52, port=Port<dpid=1, port_no=3, LIVE>,fe80::944d:44ff:fed9:7652>
+Host Add: Host<mac=46:96:a3:c1:b5:92, port=Port<dpid=1, port_no=3, LIVE>,fe80::4496:a3ff:fec1:b592>
+Host Add: Host<mac=ea:68:13:bc:97:ef, port=Port<dpid=1, port_no=3, LIVE>,fe80::e868:13ff:febc:97ef>
+Host Add: Host<mac=16:b4:bb:6c:4f:ae, port=Port<dpid=1, port_no=3, LIVE>,fe80::14b4:bbff:fe6c:4fae>
+Host Add: Host<mac=62:d9:30:3c:ba:10, port=Port<dpid=1, port_no=3, LIVE>,fe80::60d9:30ff:fe3c:ba10>
+Host Add: Host<mac=c2:d3:90:4a:02:99, port=Port<dpid=1, port_no=3, LIVE>,fe80::c0d3:90ff:fe4a:299>
+loading app stp_controller.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app None of Stp
+creating context stplib
+instantiating app stp_controller.py of STPControllerOFPV_1_3
+API method core.start called with args: {'waiter': <ryu.lib.hub.Event object at 0x747267b67040>, 'local_as': 100, 'router_id': '1.1.1.1', 'bgp_server_hosts': ['192.168.0.10'], 'bgp_server_port': 6633, 'refresh_stalepath_time': 0, 'refresh_max_eor_time': 0, 'label_range': (100, 100000), 'allow_local_as_in_count': 0, 'cluster_id': None, 'local_pref': 100}
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+Switch Enter:  Switch<dpid=1, Port<dpid=1, port_no=1, LIVE> Port<dpid=1, port_no=2, LIVE> Port<dpid=1, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=3, Port<dpid=3, port_no=1, LIVE> Port<dpid=3, port_no=2, LIVE> Port<dpid=3, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=2, Port<dpid=2, port_no=1, LIVE> Port<dpid=2, port_no=2, LIVE> Port<dpid=2, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=5, Port<dpid=5, port_no=1, LIVE> Port<dpid=5, port_no=2, LIVE> Port<dpid=5, port_no=3, LIVE> >
+Switch Enter:  Switch<dpid=4, Port<dpid=4, port_no=1, LIVE> Port<dpid=4, port_no=2, LIVE> Port<dpid=4, port_no=3, LIVE> >
+Host Add: Host<mac=86:bc:7b:78:9f:dc, port=Port<dpid=2, port_no=2, LIVE>,>
+Host Add: Host<mac=86:40:9c:10:97:2f, port=Port<dpid=2, port_no=3, LIVE>,>
+Host Add: Host<mac=16:1c:7d:54:9b:69, port=Port<dpid=4, port_no=2, LIVE>,>
+Host Add: Host<mac=16:a1:d2:c5:34:ae, port=Port<dpid=1, port_no=2, LIVE>,>
+Host Add: Host<mac=56:7d:db:c1:88:88, port=Port<dpid=3, port_no=2, LIVE>,>
+Host Add: Host<mac=12:c3:f4:21:e1:e8, port=Port<dpid=4, port_no=3, LIVE>,>
+Host Add: Host<mac=ce:c7:cc:85:39:9c, port=Port<dpid=3, port_no=3, LIVE>,>
+Host Add: Host<mac=de:66:6d:fd:7e:8f, port=Port<dpid=5, port_no=2, LIVE>,>
+Host Add: Host<mac=96:db:fe:ba:cb:88, port=Port<dpid=5, port_no=3, LIVE>,>
+Host Add: Host<mac=26:52:87:3b:53:ae, port=Port<dpid=1, port_no=3, LIVE>,>
+Host Add: Host<mac=00:00:00:00:00:04, port=Port<dpid=4, port_no=1, LIVE>,fe80::200:ff:fe00:4>
+Host Add: Host<mac=00:00:00:00:00:01, port=Port<dpid=1, port_no=1, LIVE>,10.0.0.1>
+Host Add: Host<mac=00:00:00:00:00:0a, port=Port<dpid=1, port_no=3, LIVE>,20.0.0.5>
+Host Add: Host<mac=00:00:00:00:00:02, port=Port<dpid=2, port_no=1, LIVE>,10.0.0.2>
+Host Add: Host<mac=00:00:00:00:00:03, port=Port<dpid=3, port_no=1, LIVE>,10.0.0.3>
+Host Add: Host<mac=00:00:00:00:00:05, port=Port<dpid=5, port_no=1, LIVE>,10.0.0.5>
+Host Add: Host<mac=00:00:00:00:00:06, port=Port<dpid=5, port_no=3, LIVE>,20.0.0.1>
+Host Add: Host<mac=00:00:00:00:00:09, port=Port<dpid=1, port_no=3, LIVE>,20.0.0.4>
+Host Add: Host<mac=00:00:00:00:00:0b, port=Port<dpid=3, port_no=2, LIVE>,30.0.0.1>
+Host Add: Host<mac=00:00:00:00:00:0c, port=Port<dpid=1, port_no=3, LIVE>,30.0.0.2>
+Host Add: Host<mac=00:00:00:00:00:07, port=Port<dpid=5, port_no=3, LIVE>,20.0.0.2>
+Host Add: Host<mac=00:00:00:00:00:08, port=Port<dpid=5, port_no=3, LIVE>,20.0.0.3>
+Host Add: Host<mac=00:00:00:00:00:0d, port=Port<dpid=1, port_no=3, LIVE>,30.0.0.3>
+Host Add: Host<mac=00:00:00:00:00:0e, port=Port<dpid=1, port_no=3, LIVE>,30.0.0.4>
+Host Add: Host<mac=00:00:00:00:00:0f, port=Port<dpid=1, port_no=3, LIVE>,30.0.0.5>
+Host Add: Host<mac=9a:2d:63:1a:93:09, port=Port<dpid=1, port_no=3, LIVE>,fe80::982d:63ff:fe1a:9309>
+Host Add: Host<mac=52:9a:1b:a0:0f:52, port=Port<dpid=1, port_no=3, LIVE>,fe80::509a:1bff:fea0:f52>
+Host Add: Host<mac=2a:5e:38:9d:83:32, port=Port<dpid=1, port_no=3, LIVE>,fe80::285e:38ff:fe9d:8332>
+Host Add: Host<mac=86:1a:a5:8d:21:c1, port=Port<dpid=1, port_no=3, LIVE>,fe80::841a:a5ff:fe8d:21c1>
+Host Add: Host<mac=f6:50:df:77:7a:fc, port=Port<dpid=1, port_no=3, LIVE>,fe80::f450:dfff:fe77:7afc>
+Host Add: Host<mac=aa:8a:cf:b4:a5:4e, port=Port<dpid=5, port_no=3, LIVE>,fe80::a88a:cfff:feb4:a54e>
+Host Add: Host<mac=0a:e1:cb:35:0d:ee, port=Port<dpid=1, port_no=3, LIVE>,fe80::8e1:cbff:fe35:dee>
+Host Add: Host<mac=36:d5:6a:7e:b5:78, port=Port<dpid=5, port_no=3, LIVE>,fe80::34d5:6aff:fe7e:b578>
+Host Add: Host<mac=82:0f:9e:b6:b3:8c, port=Port<dpid=1, port_no=3, LIVE>,fe80::800f:9eff:feb6:b38c>
